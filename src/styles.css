@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background : #000 ;
+}
+p{
+
+  color: white;
+}
+.movies {
+  width : 100% ;
+  display : flex ;
+  flex-wrap : wrap ;
+}
+.movies li {
+  flex : 1 ;
+  display : flex ;
+  flex-direction: column ;
+  align-items: center ;
+  list-style : none ;
+  margin: 10px ;
+  padding : 15px ;
+  border-radius : 12px ;
+  text-align : center ;
+  background : #272727 ;
+}
+.movies li img {
+  max-width : 300px ;
+  border-radius : 12px ;
+}
+.movies li h2 {
+  color : #fff ;
+  font-size : 1.8em ;
+  padding : 15px 10px 0 ;
+  margin-top : auto ;
+  font-family : "Oswald" , sans - serif ;
+}
+ol {
+  counter-reset: reversa 15;
+  list-style: none;
+}
+li {
+  counter-increment: reversa -1;
+}
+li:before {
+  content: counter(reversa) ". ";
+}
+.infopeli{
+  color:white;
+}
+
+.row {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 30px;
+
+  text-align: center;
+}
+.row span {
+  position: relative;
+  display: inline-block;
+  margin: 30px 10px;
+}
+
+.basic-slide {
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #377d6a;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 70px;
+  transition: all 0.3s ease-in-out;
+}
+.basic-slide::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300;
+}
+.basic-slide + label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7ab893;
+  transition: all 0.3s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.basic-slide:focus,
+.basic-slide:active {
+  color: #377d6a;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.basic-slide:focus::-webkit-input-placeholder,
+.basic-slide:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+.basic-slide:hover + label,
+.basic-slide:focus + label,
+.basic-slide:active + label {
+  transform: translateX(-100%);
+}
